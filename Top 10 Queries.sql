@@ -13,12 +13,7 @@ LIMIT 1 OFFSET 1;  /*Second Highest Salary from employee table*/
 select e.Employee_Name, e.Salary, m.Employee_Name AS ManagerName, m.Salary AS ManagerSalary
 FROM employee e
 JOIN employee m ON e.EmpID = m.EmpID
-WHERE e.Salary > m.Salary; /*USing ineer join to find the employee salary greater than manager salary*/
-
-SELECT Employee_Name, ManagerName, COUNT(*)
-FROM employee
-GROUP BY Employee_Name, ManagerName
-HAVING COUNT(*) > 1;
+WHERE e.Salary > m.Salary; /*USing inner join to find the employee salary greater than manager salary*/
 
 SELECT * from sales;
 
